@@ -31,4 +31,10 @@ public class UserController {
                     int pageSize){
         return userService.findAllUser(pageNum,pageSize);
     }
+
+    @ResponseBody
+    @PostMapping("/del")
+    public int delUser(UserDomain user){
+        return userService.addUser(user);
+    }
 }
